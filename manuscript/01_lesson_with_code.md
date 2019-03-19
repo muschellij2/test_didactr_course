@@ -1,0 +1,364 @@
+
+# Lesson with Code
+
+<!-- Google Slide ID -->
+
+<!-- 1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg -->
+
+<!-- Include a slide PNG with Page_ID from this Slide Deck: -->
+
+<!-- ![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=PAGE_ID) -->
+
+<!-- or use  `didactr::gs_slide_df("1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg")$png_markdown` -->
+
+### Sections
+
+<!-- Notes from Slide p-->
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=p)
+
+<!-- Notes from Slide g154a28a8c9_0_254-->
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g154a28a8c9_0_254)
+
+<!-- Notes from Slide g154a28a8c9_0_258-->
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g154a28a8c9_0_258)
+
+<!-- Notes from Slide g154aa4fae2_0_50-->
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g154aa4fae2_0_50)
+
+<!-- Notes from Slide g154aa4fae2_0_58-->
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g154aa4fae2_0_58)
+
+<!-- Notes from Slide g154aa4fae2_0_65-->
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g154aa4fae2_0_65)
+
+<!-- Notes from Slide g154aa4fae2_0_73-->
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g154aa4fae2_0_73)
+
+<!-- Notes from Slide g154a28a8c9_0_266-->
+
+``` r
+#rstats
+superheroes <-
+  c("    name, alignment, gender,         publisher",
+    " Magneto,       bad,   male,            Marvel",
+    "   Storm,      good, female,            Marvel",
+    "Mystique,       bad, female,            Marvel",
+    "  Batman,      good,   male,                DC",
+    "   Joker,       bad,   male,                DC",
+    "Catwoman,       bad, female,                DC",
+    " Hellboy,      good,   male, Dark Horse Comics")
+
+superheroes <- read.csv(text = superheroes, strip.white = TRUE)
+```
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g154a28a8c9_0_266)
+
+<!-- Notes from Slide g154a28a8c9_0_272-->
+
+``` r
+publishers <- 
+  c("publisher, yr_founded",
+    "       DC,       1934",
+    "   Marvel,       1939",
+    "    Image,       1992")
+publishers <- read.csv(text = publishers, 
+strip.white = TRUE)
+```
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g154a28a8c9_0_272)
+
+<!-- Notes from Slide g154aa4fae2_0_9-->
+
+``` r
+ijsp = inner_join(superheroes, publishers)
+```
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g154aa4fae2_0_9)
+
+<!-- Notes from Slide g154aa4fae2_0_18-->
+
+``` r
+ljsp = left_join(superheroes, publishers)
+```
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g154aa4fae2_0_18)
+
+<!-- Notes from Slide g154aa4fae2_0_36-->
+
+``` r
+fjsp <- full_join(superheroes, publishers)
+```
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g154aa4fae2_0_36)
+
+<!-- Notes from Slide g154aa4fae2_0_85-->
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g154aa4fae2_0_85)
+
+<!-- Notes from Slide g154a28a8c9_0_283-->
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g154a28a8c9_0_283)
+
+<!-- Notes from Slide g15cbe86ce4_0_31-->
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g15cbe86ce4_0_31)
+
+<!-- Notes from Slide g15cbe86ce4_0_37-->
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g15cbe86ce4_0_37)
+
+<!-- Notes from Slide g15cbe86ce4_0_46-->
+
+``` r
+install.packages('dplyr')
+install.packages('dbplyr')
+install.packages('babynames')
+install.packages('pryr')
+library(dplyr)
+library(dbplyr)
+library(babynames)
+library(pryr)
+```
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g15cbe86ce4_0_46)
+
+<!-- Notes from Slide g15cbe86ce4_0_63-->
+
+``` r
+?babynames
+View(babynames)
+str(babynames)
+object_size(babynames)
+```
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g15cbe86ce4_0_63)
+
+<!-- Notes from Slide g15cbe86ce4_0_51-->
+
+``` r
+my_db <- src_sqlite("my_db.sqlite3", 
+create = T)
+babys_sqlite <- copy_to(my_db, 
+babynames, temporary = FALSE)
+src_tbls(my_db)
+tbl(my_db,"babynames")
+```
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g15cbe86ce4_0_51)
+
+<!-- Notes from Slide g15cbe86ce4_0_70-->
+
+``` r
+newtbl = my_db %>% 
+tbl("babynames")%>% 
+filter(name=="Hilary") %>% 
+select(year,n,name)
+newtbl
+```
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g15cbe86ce4_0_70)
+
+<!-- Notes from Slide g15cbe86ce4_0_76-->
+
+``` r
+newtbl = my_db %>% 
+tbl("babynames")%>% 
+filter(name=="Hilary") %>% 
+select(year,n,name)
+newtbl
+```
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g15cbe86ce4_0_76)
+
+<!-- Notes from Slide g15cbe86ce4_0_83-->
+
+``` r
+newtbl = my_db %>% 
+tbl("babynames")%>% 
+filter(name=="Hilary") %>% 
+select(year,n,name)
+output = newtbl %>% collect()
+```
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g15cbe86ce4_0_83)
+
+<!-- Notes from Slide g15cbe86ce4_0_90-->
+
+``` r
+popular = babynames %>%
+  group_by(name) %>%
+  summarise(N = sum(n)) %>%
+arrange(desc(N)) %>% top_n(100)
+```
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g15cbe86ce4_0_90)
+
+<!-- Notes from Slide g15cbe86ce4_0_100-->
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g15cbe86ce4_0_100)
+
+<!-- Notes from Slide g15cbe86ce4_0_112-->
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g15cbe86ce4_0_112)
+
+<!-- Notes from Slide g15cbe86ce4_0_118-->
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g15cbe86ce4_0_118)
+
+<!-- Notes from Slide g15cbe86ce4_0_128-->
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g15cbe86ce4_0_128)
+
+<!-- Notes from Slide g15cbe86ce4_0_144-->
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g15cbe86ce4_0_144)
+
+<!-- Notes from Slide g15cbe86ce4_0_157-->
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g15cbe86ce4_0_157)
+
+<!-- Notes from Slide g15cbe86ce4_0_168-->
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g15cbe86ce4_0_168)
+
+<!-- Notes from Slide g154aa4fae2_0_91-->
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g154aa4fae2_0_91)
+
+<!-- Notes from Slide g23d7fee4da_0_109-->
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g23d7fee4da_0_109)
+
+<!-- Notes from Slide g15cbe86ce4_0_0-->
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g15cbe86ce4_0_0)
+
+<!-- Notes from Slide g15cbe86ce4_0_6-->
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g15cbe86ce4_0_6)
+
+<!-- Notes from Slide g15cbe86ce4_0_20-->
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g15cbe86ce4_0_20)
+
+<!-- Notes from Slide g15cbe86ce4_0_26-->
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g15cbe86ce4_0_26)
+
+<!-- Notes from Slide g15cbe86ce4_0_180-->
+
+``` r
+write_csv(babynames,
+file="babynames.csv")
+system.time(read.csv('babynames.csv'))
+system.time(read_csv('babynames.csv'))
+system.time(fread('babynames.csv'))
+```
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g15cbe86ce4_0_180)
+
+<!-- Notes from Slide g15cbe86ce4_0_186-->
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g15cbe86ce4_0_186)
+
+<!-- Notes from Slide g15cbe86ce4_0_194-->
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g15cbe86ce4_0_194)
+
+<!-- Notes from Slide g15cbe86ce4_0_199-->
+
+``` r
+baby_dt[sex=="F",.(name,mean(prop))]
+baby_dt[sex=="F",
+.(name,mean(prop)),name]
+baby_dt[sex=="F",
+.(name,aveprop=mean(prop)),name]
+baby_dt[,aveprop:=mean(prop),name]
+
+
+#rstats
+```
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g15cbe86ce4_0_199)
+
+<!-- Notes from Slide g15cbe86ce4_0_205-->
+
+{format: png}
+![](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/export/png?id=1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg&pageid=g15cbe86ce4_0_205)
+
+### Summary
+
+### Additional Resources
+
+### Slides and Video
+
+<!-- ![Lesson with Code](YouTube Link) -->
+
+  - [Slides](https://docs.google.com/presentation/d/1X76ckIsLaNjw1AQGuiG5VK5nRgIah0JSQ8xGpfs9jtg/edit?usp=sharing)
+
+{quiz, id: quiz\_01\_lesson\_with\_code}
+
+### Lesson with Code quiz
+
+{choose-answers: 4} ?
+
+3)  The answer to this one
+
+<!-- end list -->
+
+15) Not the answer
+
+<!-- end list -->
+
+3)  
+<!-- end list -->
+
+13) 
+{/quiz}
